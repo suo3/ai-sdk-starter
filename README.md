@@ -24,7 +24,22 @@ pnpm install
 
 ### 2. Environment Setup
 
-Create a `.env.local` file in the root directory and configure your AI provider API keys (e.g., OpenAI, Anthropic) or link your project to Vercel to use the Vercel AI Gateway.
+Create a `.env.local` file in the root directory and configure your AI provider API keys. We recommend using Google Gemini for this project, but you can also use OpenAI, Anthropic, or the Vercel AI Gateway.
+
+**For Google Gemini:**
+```env
+GOOGLE_GENERATIVE_AI_API_KEY=your-gemini-api-key-here
+```
+
+**For Vercel AI Gateway (alternative):**
+```env
+AI_GATEWAY_API_KEY=your-gateway-key-here
+```
+
+To verify your configuration, run:
+```bash
+pnpm tsx env-check.ts
+```
 
 ### 3. Run the Development Server
 
